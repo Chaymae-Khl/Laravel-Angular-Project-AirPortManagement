@@ -1,0 +1,79 @@
+
+ <div class="container head">
+    <app-top-navbar> </app-top-navbar></div>
+<div class="container">
+    <h2>Formulaire de modification</h2>
+    <button class="btn r" style="position: absolute;top: 130px;background-color: rgb(248, 161, 30);"> <a style="text-decoration: none;color: azure;" routerLink="/gestion"> <svg id="return" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+      </svg></a></button>
+<form class="well form-horizontal" (ngSubmit)="updateVol()">
+   
+    <div class="form-group">
+        <label for="heure_depart">Heure Depart</label>
+        <input type="time" name="heure_depart" class="text form-control input-small" [(ngModel)]="vol.heure_depart" >
+    </div>
+
+    <div class="form-group">
+        <label for="heure_arrive">Heure Arrivée</label>
+        <input type="time" name="heure_arrive" class="text form-control" [(ngModel)]="vol.heure_arrive">
+    </div>
+
+    <div class="form-group">
+        <label for="date_depart">Date Depart</label>
+        <input type="date" name="date_depart" class="text form-control" [(ngModel)]="vol.date_depart" >
+    </div>
+    <div class="form-group">
+        <label for="date_arrive">Date Arrivée</label>
+        <input type="date" name="date_arrive" class="text form-control" [(ngModel)]="vol.date_arrive" >
+    </div>
+
+    <div class="form-group">
+        <label for="ville_depart">Ville Depart</label>
+        <input type="text" name="ville_depart" class="text form-control" [(ngModel)]="vol.ville_depart">
+    </div>
+
+    <div class="form-group">
+        <label for="ville_arrive">Ville Arrivée</label>
+        <input type="text" name="ville_arrive" class="text form-control" [(ngModel)]="vol.ville_arrive">
+    </div>
+    <label for="Etat">Etat</label>
+    <div class="custom-control custom-radio">
+        <input id="annuler" type="radio" class="custom-control-input" value="annuler" name="etat"  [(ngModel)]="vol.etat">
+        <label class="custom-control-label" for="annuler">Annuler</label>
+     </div>
+     <div class="custom-control custom-radio">
+        <input id="retarder" type="radio" class="custom-control-input" value="retarder" name="etat"  [(ngModel)]="vol.etat">
+        <label class="custom-control-label" for="retarder">Retarder</label>
+     </div>
+     <div class="custom-control custom-radio">
+      <input id="retarder" type="radio" class="custom-control-input" value="retarder" name="etat"  [(ngModel)]="vol.etat">
+      <label class="custom-control-label" for="retarder">Normale</label>
+   </div>
+    <div class="form-group">
+        <label for="aeroport_depart">Aéroport Depart</label>
+        <input type="text" name="aeroport_depart" class="text form-control" [(ngModel)]="vol.aeroport_depart">
+    </div>
+    <div class="form-group">
+        <label for="aeroport_arrive">Aéroport Arrivée</label>
+        <input type="text" name="aeroport_arrive" class="text form-control" [(ngModel)]="vol.aeroport_arrive" >
+    </div>
+
+    <div class="form-group">
+        <label for="terminal_depart">Terminal Depart</label>
+        <input type="text" name="description" class="text form-control" [(ngModel)]="vol.terminal_depart" >
+    </div>
+
+    <div class="form-group">
+        <label for="teminal_arrive">Terminal Arrivée</label>
+        <input type="text" name="teminal_arrive" class="text form-control" [(ngModel)]="vol.teminal_arrive">
+    </div>
+
+
+    
+
+    <button class="btn btn-primary btn -sm mt-4">Valider</button>
+</form>
+</div>
+<!-- ======= Footer ======= -->
+<app-footer></app-footer>
+<!-- End Footer -->

@@ -1,0 +1,27 @@
+.list{
+    background-color: rgb(245, 174, 8);
+   margin-top: 20px; 
+}
+li{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    padding: 20px;
+    
+}
+.all{
+    margin-top: 110px;
+}
+span{
+    color: rgb(10, 41, 177);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 30px;
+}
+#img1{
+    position: absolute;
+    left: 1340px;
+    top: 291px;
+} 
+#img2{
+    width: 30px;
+   margin: 10px;
+}

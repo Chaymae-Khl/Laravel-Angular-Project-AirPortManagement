@@ -1,0 +1,96 @@
+<app-top-navbar> </app-top-navbar>
+
+
+<div class="container">
+    <div class=" text-center mt-5 ">
+        <h1 >ENREGISTRER BAGAGE</h1>
+    </div>
+
+    
+        <div class="row ">
+  <div class="col-lg-7 mx-auto">
+    <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+   
+        <div class = "container">
+        <form id="contact-form" role="form" (ngSubmit)="insertbagaData()">
+
+        
+
+        <div class="controls">
+            
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_name">Numero Passager</label>
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Entrez le numero du passager *" [(ngModel)]="bagage.id_pass" required="required" data-error="numero is required.">
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_name">Numero du Passport</label>
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Entrez le numero du Passport *" [(ngModel)]="bagage.num_passort" required="required" data-error="numero is required.">
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_number">Nom Passager</label>
+                        <input id="form_number" type="text" name="poids" class="form-control" placeholder="Entrez le nom du passager *" [(ngModel)]="bagage.nom" required="required" data-error="Valid number is required.">
+                        
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_message">Poids</label>
+                        <input id="form_number" type="number" name="poids" class="form-control" placeholder="Entrez le poids du bagage *" [(ngModel)]="bagage.poids" required="required" data-error="Valid number is required.">
+
+                        </div>
+
+                    </div>
+
+
+                <div class="col-md-12">
+                    
+                    <button type="submit" class="btn btn-success" > ENREGISTRER</button>
+                    <button class="btn" style="position: relative;left: 310px;padding: 6px;border-radius: 6px;background-color:rgb(247, 148, 0) ;"> <a style="text-decoration: none;color: rgb(246, 246, 246);"  routerLink="/listebagage">Liste de Bagages</a></button>
+
+
+                
+            </div>
+      
+            </div>
+
+
+    </div>
+     </form>
+    </div>
+        </div>
+
+
+</div>
+    <!-- /.8 -->
+
+</div>
+<!-- /.row-->
+
+
+</div>
+
+</div>
+<!-- ======= Footer ======= -->
+<app-footer></app-footer>
+<!-- End Footer -->

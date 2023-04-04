@@ -1,0 +1,31 @@
+#in1{
+
+    position: relative;
+    left: -100px;
+}
+#add{
+margin-top: 25px;
+position: relative;
+left: 1072px;
+top: 150px;
+}
+#inpu{
+    position: relative;
+    width: 220px;
+    top: -10px;
+    padding: 8px;
+    border-color: orange;
+ }
+ img{
+    width: 50px;
+
+ } 
+ #ser{
+    color: rgb(255, 167, 4);
+    position: absolute;
+    margin: 20px;
+    top: 188px;
+ }
+ table{
+    border-color:  orange;
+ }

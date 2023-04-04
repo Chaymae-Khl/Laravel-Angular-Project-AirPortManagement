@@ -1,0 +1,521 @@
+<div class="container">
+  <app-top-navbar> </app-top-navbar>
+</div>
+<div id="all">
+<div  class="sidebar">
+
+      <ul class="nav-links">
+        <li>
+          <a  class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">TABLEAU DE BORD</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">PASSAGER</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/entrerinfopass">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">AGENT ESCALE</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/gestion">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">RESPONSABLE VOLS</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/consulter">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">PILOTE</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/enregistrer">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">HÔTESSE AEROPORT</span>
+          </a>
+        </li>
+        <li>
+          <a href="/notification">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">POMPIER</span>
+          </a>
+        </li>
+       
+        <li>
+          <li>
+            <a href="https://deadsimplechat.com/dashboard/chatrooms">
+              <i class='bx bx-user' ></i>
+              <span class="links_name">Chat management</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/chatadmin">
+              <i class='bx bx-user' ></i>
+              <span class="links_name">Chat</span>
+            </a>
+          </li>
+       
+        
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">TABLEAU DE BORD</span>
+      </div>
+      <div class="search-box">
+        <input type="text" [(ngModel)]="users.id" name="users.id"  placeholder="RECHERCHE...">
+        <i class='bx bx-search' ></i>
+      </div>
+     
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Passager</div>
+            <div class="number">{{nbrpassagers}}</div>
+            
+          </div>
+          <i class='bx bx-user cart'></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Vols</div>
+            <div class="number">{{nbrvols}}</div>
+           
+          </div>
+          <i class='bx bxs-plane cart two'></i>        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Reservat°</div>
+            <div class="number">12 876</div>
+           
+          </div>
+          
+          <i class=' bx bxs-coupon cart three' ></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Bagages</div>
+            <div class="number">{{nbrbagages}}</div>
+           
+          </div>
+          <i class='bx bx-shopping-bag cart four' ></i>
+        </div>
+      </div>
+
+
+      <div class="container-fluid py-4">
+        <div class="row">
+          <div class="col-12">
+            <div class="card mb-4">
+              <div class="card-header pb-0">
+                <h6>Table des personnels</h6>
+              </div>
+              <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Personnels</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Fonction</th>
+                        <th class="text-secondary opacity-7"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let user of users|tableFilteruser: users.id;let i=index" >
+                      
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">{{users[i].id}}</h6>
+                              <h6 class="mb-0 text-sm">{{users[i].name}}</h6>
+                              <p class="text-xs text-secondary mb-0">{{users[i].email}}</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-bold mb-0">{{users[i].poste}}</p>
+                        </td>
+                       
+                        <td class="align-middle">
+                          <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                            Edit
+                          </a>
+                        </td>
+                      </tr>
+                      <!-- <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Alexa Liras</h6>
+                              <p class="text-xs text-secondary mb-0">alexa@gmail.com</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-bold mb-0">hôtesse aéroportuaire</p>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class="badge badge-sm bg-gradient-secondary">hors ligne</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">11/01/2019</span>
+                        </td>
+                        <td class="align-middle">
+                          <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                            Edit
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Laurent Perrier</h6>
+                              <p class="text-xs text-secondary mb-0">laurent@gmail.com</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-bold mb-0">responsable des vols</p>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class="badge badge-sm bg-gradient-success">Online</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">19/09/2017</span>
+                        </td>
+                        <td class="align-middle">
+                          <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                            Edit
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Michael Levi</h6>
+                              <p class="text-xs text-secondary mb-0">michael@gmail.com</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-bold mb-0">Passager</p>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class="badge badge-sm bg-gradient-success">en ligne</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">24/12/2022</span>
+                        </td>
+                        <td class="align-middle">
+                          <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                            Edit
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Richard Gran</h6>
+                              <p class="text-xs text-secondary mb-0">richard@gmail.com</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-bold mb-0">Pilote</p>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class="badge badge-sm bg-gradient-secondary">hors ligne</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">04/10/2021</span>
+                        </td>
+                        <td class="align-middle">
+                          <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                            Edit
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Miriam Eric</h6>
+                              <p class="text-xs text-secondary mb-0">miriam@gmail.com</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-bold mb-0">Pompier</p>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class="badge badge-sm bg-gradient-secondary">hors ligne</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">14/09/2020</span>
+                        </td>
+                        <td class="align-middle">
+                          <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                            Edit
+                          </a>
+                        </td>
+                      </tr>-->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+        <!-- <div class="row">
+          <div class="col-12">
+            <div class="card mb-4">
+              <div class="card-header pb-0">
+                <h6>Table de reservation</h6>
+              </div>
+              <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                  <table class="table align-items-center justify-content-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Numero vol</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Budget</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">E-mail passager</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Activer/Desactiver</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-sm">12</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-sm font-weight-bold mb-0">2 500 dh</p>
+                        </td>
+                        <td>
+                          <span class="text-xs font-weight-bold">payé</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center justify-content-center">
+                            <span class="me-2 text-xs font-weight-bold">awa@gmail.com</span>
+                            <div>
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                         
+                            <button type="button" class="btn btn-success">activer</button>
+                            <button type="button" class="btn btn-danger">desactiver</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-sm">56</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-sm font-weight-bold mb-0">5 000 dh</p>
+                        </td>
+                        <td>
+                          <span class="text-xs font-weight-bold">non payé</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center justify-content-center">
+                            <span class="me-2 text-xs font-weight-bold">jean@gmail.com</span>
+                            <div>
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                        
+                            <button type="button" class="btn btn-success">activer</button>
+                            <button type="button" class="btn btn-danger">desactiver</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-sm">10</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-sm font-weight-bold mb-0">3 400 dh</p>
+                        </td>
+                        <td>
+                          <span class="text-xs font-weight-bold">payé</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center justify-content-center">
+                            <span class="me-2 text-xs font-weight-bold">act@gmail.com</span>
+                            <div>
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="30" style="width: 30%;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                         
+                            <button type="button" class="btn btn-success">activer</button>
+                            
+                            <button type="button" class="btn btn-danger">desactiver</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-sm">78</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-sm font-weight-bold mb-0">1 000 dh</p>
+                        </td>
+                        <td>
+                          <span class="text-xs font-weight-bold">non payé</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center justify-content-center">
+                            <span class="me-2 text-xs font-weight-bold">Des@gmail.com</span>
+                            <div>
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0%;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                          
+                            <button type="button" class="btn btn-success">activer</button>
+                            <button type="button" class="btn btn-danger">desactiver</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-sm">80</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-sm font-weight-bold mb-0">14 000 dh</p>
+                        </td>
+                        <td>
+                          <span class="text-xs font-weight-bold">payé</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center justify-content-center">
+                            <span class="me-2 text-xs font-weight-bold">lea@gmail.com</span>
+                            <div>
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="80" style="width: 80%;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                          
+                            <button type="button" class="btn btn-success">activer</button>
+                            <button type="button" class="btn btn-danger">desactiver</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2">
+                            <div>
+                            </div>
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-sm">101</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-sm font-weight-bold mb-0">2 300 dh</p>
+                        </td>
+                        <td>
+                          <span class="text-xs font-weight-bold">payé</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <div class="d-flex align-items-center justify-content-center">
+                            <span class="me-2 text-xs font-weight-bold">tim@gmail.com</span>
+                            <div>
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                            <button type="button" class="btn btn-success">activer</button>
+                            <button type="button" class="btn btn-danger">desactiver</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>-->
+        
+      </div> 
+
+
+      
+    </div>
+  </section>
+</div>

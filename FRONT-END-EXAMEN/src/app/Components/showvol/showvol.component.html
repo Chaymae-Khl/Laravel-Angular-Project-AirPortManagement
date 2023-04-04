@@ -1,0 +1,26 @@
+<app-top-navbar> </app-top-navbar>
+
+<div class="all">
+<div class="container">
+    <img id="img1" src="assets/img/airplane.png" alt="">
+    <button class="btn r" style="position: absolute;top: 130px;background-color: rgb(74, 74, 159);"> <a style="text-decoration: none;color: azure;" routerLink="/gestion"> <svg id="return" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+  </svg></a></button>
+<ul class=" list ">
+    <li class="list-group-item "><span><img id="img2" src="assets/img/id.png"alt="">Numéro du Vol :</span> {{id}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/time.png"alt="">Heure de depart:</span> {{data.heure_depart}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/time.png"alt="">Heure d'arrive:</span> {{data.heure_arrive}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/calen.png"alt="">Date de depart:</span> {{data.date_depart}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/calen.png"alt="">Date d'arrive:</span> {{data.date_arrive}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/loca.png"alt="">Ville de depart:</span> {{data.ville_depart}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/loca.png"alt="">Ville d'arrive:</span> {{data.ville_arrive}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/etat.png"alt="">Etat de vol:</span> {{data.etat}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/depart.png"alt="">Aeroport de depart:</span> {{data.aeroport_depart}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/arrive.png"alt="">Aeroport d'arrive:</span> {{data.aeroport_arrive}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/tunnel.png"alt="">Terminal de depart:</span> {{data.terminal_depart}}</li>
+    <li class="list-group-item"><span><img id="img2" src="assets/img/tunnel.png"alt="">Terminal d'arrive:</span> {{data.teminal_arrive}}</li>
+
+  </ul></div></div> 
+ <!-- ======= Footer ======= -->
+<app-footer></app-footer>
+<!-- End Footer -->

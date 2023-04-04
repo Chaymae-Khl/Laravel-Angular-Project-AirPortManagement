@@ -1,0 +1,82 @@
+
+.head{
+    
+    padding: 20px;
+    
+} 
+#ajout{
+    position: relative;
+    left: 1090px;
+    top: 286px;
+    background-color:  rgb(46, 69, 93) ;
+    color: azure;
+}
+#notif{
+   position: relative;
+   left: 1122px;
+   top: 70px;
+   background-color:  rgb(46, 69, 93) ;
+   color: azure;
+}
+#inpu{
+    position: relative;
+    width: 220px;
+    top: -10px;
+    padding: 8px;
+    border-color: rgb(255, 167, 4);
+    
+ }
+ #deltup{
+    background-color: rgb(242, 247, 247);
+    color: rgb(46, 69, 93);
+    border-color:  rgb(240, 10, 6) ;
+ }
+ #up{
+   background-color: rgb(242, 247, 247);
+   color: rgb(46, 69, 93);
+   border-color:  orange;
+}
+ 
+ #deltup:hover{
+    background-color: rgb(240, 10, 6);
+    color: rgb(242, 247, 247);
+    border-color:  rgb(240, 10, 6) ;
+ }
+ #up:hover{
+   background-color: orange;
+   color: rgb(242, 247, 247);
+   border-color:  orange ;
+}
+ .table{
+    border-color: rgb(255, 167, 4);
+ }
+ th{
+    color:rgb(46, 69, 93) ;
+ }
+ #sombl{
+    color: rgb(255, 167, 4);
+    position: absolute;
+    margin: 20px;
+    top: 339px;
+ }
+
+ img{
+   width: 28px;
+  
+ }
+ .trait_dessus
+{
+border-top: 1px solid rgb(48, 107, 174);
+width : 1199px;
+}
+#show{
+   background-color: rgb(242, 247, 247);
+   color: rgb(46, 69, 93);
+   border-color:  rgb(51, 65, 156) ;
+}
+#show:hover{
+   background-color: rgb(51, 65, 156);
+   color: rgb(242, 247, 247);
+   border-color:  rgb(51, 65, 156) ;
+}
+

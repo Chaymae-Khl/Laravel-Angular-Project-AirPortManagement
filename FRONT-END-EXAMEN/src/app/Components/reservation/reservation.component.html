@@ -1,0 +1,111 @@
+
+<div id="booking" class="section">
+  <div class="section-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="booking-cta">
+            <h1>RÉSERVEZ VOTRE VOL AUJOURD'HUI</h1>
+            <p>On voyage pour changer non seulement de lieu mais aussi d'idées</p>
+          </div>
+        </div>
+        <div class="col-md-7 col-md-offset-1">
+          <div class="booking-form">
+            <form>
+              <div class="form-group">
+                <div class="form-checkbox">
+                  <label for="roundtrip">
+                    <input type="radio" id="roundtrip" name="flight-type">
+                    <span></span>Aller-retour
+                  </label>
+                  <label for="one-way">
+                    <input type="radio" id="one-way" name="flight-type">
+                    <span></span>Aller-simple
+                  </label>
+                  <label for="multi-city">
+                    <input type="radio" id="multi-city" name="flight-type">
+                    <span></span>multi-destinations
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Origine</span>
+                    <input class="form-control" type="text" placeholder="D'où partez-vous?">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Destination</span>
+                    <input class="form-control" type="text" placeholder="Où allez-vous?">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Depart le</span>
+                    <input class="form-control" type="date" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Retour le</span>
+                    <input class="form-control" type="date" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <span class="form-label">ADULTES (18+)</span>
+                    <select class="form-control">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <span class="form-label">ENFANTS (0-17)</span>
+                    <select class="form-control">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <span class="form-label">classe de voyage</span>
+                    <select class="form-control">
+                      <option>Classe Economique</option>
+                      <option>Classe Affaire</option>
+                      <option>Première Classe</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-btn">
+                <button class="submit-btn">RECHERCHER VOLS</button>
+                                  <button class="btn btn-light"><a routerLink="/accueil">RETOUR</a></button>
+                                  <button class="btn btn-light"><a routerLink="/acheter">Acheter</a></button>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- ======= Footer ======= -->
+<app-footer></app-footer>
+<!-- End Footer -->

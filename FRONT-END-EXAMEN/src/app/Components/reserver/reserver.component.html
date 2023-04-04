@@ -1,0 +1,57 @@
+<app-top-navbar> </app-top-navbar>
+<br>
+
+<div class="container">
+   
+      <form class="uk-form">
+        <input id="inpu" [(ngModel)]="vol.id" name="vol.id" placeholder="Numero vol">
+      
+      <svg id="ser" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg></form>
+    
+     <table class="table">
+        <thead>
+            <tr>
+              <th scope="col">Num Vol</th>
+              <th scope="col">Heure Depart</th>
+              <th scope="col">Heure Arrivée</th>
+              <th scope="col">Date Depart</th>
+              <th scope="col">Date Arrivée</th>
+              <th scope="col">Ville Depart</th>
+              <th scope="col">Ville Arrivée</th>
+              <th scope="col">Etat</th>
+              <th scope="col">Aéroport Depart</th>
+              <th scope="col">Aéroport Arrivée</th>
+              <th scope="col">Terminal Depart</th>
+              <th scope="col">Terminal Arrivée</th>
+              <th scope="col"></th>
+              
+    
+            </tr>
+        </thead>
+        <tbody>
+           
+                <tr *ngFor="let vol of vols |tableFiltervol: vol.id">
+                    <td scope="row">{{vol.id}}</td>
+                    <td>{{vol.heure_depart}}</td>
+                    <td>{{vol.heure_arrive}}</td>
+                    <td>{{vol.date_depart}}</td>
+                    <td>{{vol.date_arrive}}</td>
+                    <td>{{vol.ville_depart}}</td>
+                    <td>{{vol.ville_arrive}}</td>
+                    <td>{{vol.etat}}</td>
+                    <td>{{vol.aeroport_depart}}</td>
+                    <td>{{vol.aeroport_arrive}}</td>
+                    <td>{{vol.terminal_depart}}</td>
+                    <td>{{vol.teminal_arrive}}</td>
+                    <td><a routerLink="/reservation/{{vol.id}}"><button  class="btn btn-warning btn-sm" >            
+                    Reserver</button></a></td>
+                </tr>
+       
+            </tbody>
+        </table>
+        </div>
+        <!-- ======= Footer ======= -->
+<app-footer></app-footer>
+<!-- End Footer --> 

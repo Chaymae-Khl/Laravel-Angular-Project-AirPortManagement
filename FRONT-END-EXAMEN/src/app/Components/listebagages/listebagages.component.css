@@ -1,0 +1,23 @@
+#inpu{
+    position: relative;
+    width: 220px;
+    top: -10px;
+    padding: 8px;
+    border-color: rgb(255, 167, 4);
+ }
+ .table{
+    border-color: rgb(255, 167, 4);
+ }
+ #search{
+    color: rgb(255, 167, 4);
+    position: absolute;
+    margin: 20px;
+    top: 182px;
+ }
+ #return{
+   color: rgb(248, 247, 245);
+   font-size: 120px;
+ }
+ img{
+    width: 40px;
+ }

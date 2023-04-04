@@ -1,0 +1,35 @@
+<div class="container d-flex align-items-center">
+  <img src="/assets/img/logo.png" alt="">
+  <h1 class="logo me-auto">  </h1>
+  <!-- Uncomment below if you prefer to use an image logo -->
+  <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+
+  <nav id="navbar" class="navbar">
+    
+     <p *ngIf="authenticated" style="color: rgb(25, 67, 119);position: relative;font-size: 18px; top: 11px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><i style="color: rgb(25, 67, 119);position: relative; top: -3px;" class="fa fa-user-o"></i>                      {{message}}</p>
+      
+     
+     <ul>
+      <li id="reserv"><a routerLink="/reservation" *ngIf="!authenticated" style="text-decoration: none;"> <button type="button" class="btn  "><span class="glyphicon glyphicon-sign-in"></span>Reserver</button></a></li>
+   
+      <li class="dropdown"><i *ngIf="!authenticated" id="list" class="fa fa-list"></i>
+        
+        <ul>
+          <li><a style="text-decoration: none;" routerLink="/authentification"><button class="btn"><i class="fa fa-user-o"></i>Login</button></a></li>
+
+          <li><a routerLink="/signin" style="text-decoration: none;"> <button type="button" class="btn  "><span class="glyphicon glyphicon-sign-in"></span> <i class="fa fa-user-o"></i>Sign in</button></a></li>
+          
+        
+        </ul>
+       
+      </li>
+      
+      
+      <li *ngIf="authenticated"><a (click)="logout()" routerLink="/accueil" style="text-decoration: none;"> <button type="button" id="logout" class="btn btn-danger "><span class="glyphicon glyphicon-sign-in"></span><i class="fa fa-sign-out" aria-hidden="true"></i></button></a></li>
+       
+
+    </ul>
+   
+  </nav><!-- .navbar -->
+
+</div>
